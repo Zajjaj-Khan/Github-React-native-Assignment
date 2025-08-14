@@ -6,6 +6,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
 import { Navigation } from './navigation';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -23,6 +26,10 @@ export function App() {
   const theme = colorScheme === 'dark' ? DarkTheme : DefaultTheme
 
   return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store}>
+
+    
     <Navigation
       theme={theme}
       linking={{
@@ -33,5 +40,7 @@ export function App() {
         SplashScreen.hideAsync();
       }}
     />
+      </Provider>
+    </GestureHandlerRootView>
   );
 }
