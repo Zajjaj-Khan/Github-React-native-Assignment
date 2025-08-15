@@ -21,7 +21,7 @@ Before you start, make sure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone (https://github.com/Zajjaj-Khan/Github-React-native-Assignment.git)
 cd YOUR_REPO
 ```
 ### 2. Intstall Required node modules
